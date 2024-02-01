@@ -1,4 +1,17 @@
-//Pre:Diseñar un sistema de gestion de una pizzeria
+#Pre:Diseñar un sistema de gestion de una pizzeria
 pedido = []
 
-//Post:Acabar con un programa con cohesion y acoplat
+def tomar_la_comanda(pedido):
+
+
+def preparacion_de_pizzas(pedido):
+
+
+def gestion_del_estoc_ingredientes(pedido):
+
+
+def proceso_de_pagar(pedido):
+
+
+
+#Post:Acabar con un programa con cohesion y acoplat

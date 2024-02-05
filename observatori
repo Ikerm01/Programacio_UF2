@@ -1,0 +1,32 @@
+//Pre: Hacer un programa que regriste la temperatura semanal para un observatorio
+temperatura_semanal = []
+fecha_acutal = []
+
+def regristar_temperatura_setmanal():
+
+def consultar_temperatura_mitjana():
+
+def consultar_diferencia_maxima():
+
+
+
+
+opcion = "0"
+while opcion != "4":
+    print("[RT]. Registrar temperatures setmanals.")
+    print("[MJ]. Consultar temperatura mitjana. ")
+    print("[DF]. Consultar diferència màxima.")
+    print("[FI]. Salir")
+    
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == "RT":
+        regristar_temperatura_setmanal()
+    elif opcion == "MJ":
+        consultar_temperatura_mitjana()
+    elif opcion == "DF":
+        consultar_diferencia_maxima()
+    elif opcion == "FI":
+        print("Saliendo del programa...")
+        break
+//Post:Poder consultar en cualquier momento cuál ha sido la temperatura media y la diferencia entre el valor máximo y mínimo registrados y la fecha actual también se muestra en pantalla.

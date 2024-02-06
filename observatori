@@ -6,7 +6,14 @@ def regristar_temperatura_setmanal(temperatura_semanal):
     temperaturas = input("Escriu les temperatures d'aquesta setmana")
     temperatura_semanal.append(temperaturas)
 def consultar_temperatura_mitjana():
-
+    def consultar_temperatura_mitjana():
+    for temperatura in temperatura_semanal:
+        suma = 0
+        for suma in temperatura:
+            suma += temperatura
+        media = suma /len(temperatura)
+        media_temperatura.append(media)
+        print(media_temperatura)
 def consultar_diferencia_maxima():
 
 

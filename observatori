@@ -2,8 +2,9 @@
 temperatura_semanal = []
 fecha_acutal = []
 
-def regristar_temperatura_setmanal():
-
+def regristar_temperatura_setmanal(temperatura_semanal):
+    temperaturas = input("Escriu les temperatures d'aquesta setmana")
+    temperatura_semanal.append(temperaturas)
 def consultar_temperatura_mitjana():
 
 def consultar_diferencia_maxima():
@@ -12,7 +13,7 @@ def consultar_diferencia_maxima():
 
 
 opcion = "0"
-while opcion != "4":
+while opcion != "FI":
     print("[RT]. Registrar temperatures setmanals.")
     print("[MJ]. Consultar temperatura mitjana. ")
     print("[DF]. Consultar diferència màxima.")

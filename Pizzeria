@@ -47,4 +47,8 @@ while opcion != "5":
         break
     else:
         print("Opción no válida. Por favor, seleccione una opción válida.")
+<<<<<<< HEAD
 #Post:Acabar con un programa con cohesion y acoplat
+=======
+#Post:Acabar con un programa con cohesion y acoplat
+>>>>>>> d0c56fa (brttb)

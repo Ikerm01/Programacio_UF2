@@ -14,7 +14,16 @@ def consultar_temperatura_mitjana():
         media = suma /len(temperaturas)
         media_temperatura.append(media)
         print(media_temperatura)
-#def consultar_diferencia_maxima():
+def consultar_diferencia_maxima(array):
+    size = len(array)
+    for i in range(0, len(array)):
+        for j in range(0,size - i -1):
+            if array[j] > array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+    maximo = array[-1]
+    minimo = array[0]
+    diferencia = maximo - minimo
+    print(diferencia)
 
 opcion = 0
 
@@ -31,7 +40,7 @@ while opcion != "FI":
     elif opcion == "MJ":
         consultar_temperatura_mitjana()
     elif opcion == "DF":
-        consultar_diferencia_maxima()
+        consultar_diferencia_maxima(temperatura_semanal)
     elif opcion == "FI":
         print("Saliendo del programa...")
         break

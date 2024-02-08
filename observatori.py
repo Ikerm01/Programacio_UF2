@@ -1,7 +1,9 @@
 #Pre: Hacer un programa que regriste la temperatura semanal para un observatorio
 temperatura_semanal = []
 fecha_acutal = []
-
+########################.replace(',','.')
+#for temperatura in lector.split():
+#temperaturas.append(float(temperatura.replace(',','.')))
 def regristar_temperatura_setmanal(temperatura_semanal):
     temperaturas = input("Escriu les temperatures d'aquesta setmana")
     temperatura_semanal.append(temperaturas)

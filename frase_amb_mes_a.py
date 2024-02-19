@@ -1,4 +1,3 @@
-
 fi = False
 frases = []
 
@@ -21,18 +20,27 @@ def tratar_opcio():
         print("Opcio incorrecta!")
 
 def pedir_frase():
-    frase = input("Introduce la frase") 
+    frase = input("Escriu una frase: ")
     frases.append(frase)
-    return frase    
+    mostrar_resultado(frase)
 
 def llegir_frase(frase):
-    contador = 0    
+    contador = 0
     for letra in frase.lower():
         if letra == 'a':
-            contador +=1
+            contador += 1
     return contador
-def mostrar_frase(frase,contador):
-    print("La frase amb mes 'a' es: ")
+
+def mostrar_resultado(frase):
+    frase_con_mas_a = []
+    cantidad_de_a_maxima = 0
+    for frase in frases:
+        cantidad_de_a = llegir_frase(frase)
+        if cantidad_de_a > cantidad_de_a_maxima:
+            cantidad_de_a_maxima = cantidad_de_a
+            frase_con_mas_a = frase
+    print('La frase con más letras "a" es: ',frase_con_mas_a)
+    print('Té',cantidad_de_a_maxima,"a.")
 
 def final_del_programa():
     global fi

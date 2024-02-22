@@ -1,1 +1,14 @@
-...
+import random
+
+
+def tirar_dados():
+    suma=0
+    for tirada in range(2):
+        suma+= random.randit(1,6)
+    return suma
+def calcular_nombre_de_repeticions():
+    ...
+def calcular_maxim_valor():
+    ...
+def mostrar_histograma():
+    ...

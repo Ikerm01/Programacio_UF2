@@ -1,14 +1,38 @@
 import random
+tirades = 0
 
 
 def tirar_dados():
     suma=0
     for tirada in range(2):
-        suma+= random.randit(1,6)
+        suma+= random.randint(1,6)
     return suma
-def calcular_nombre_de_repeticions():
+def calcular_nombre_de_repeticions(tirades):
+    repeticiones = []
+    for tirada in range(2, 13):
+        repeticiones.append(0) 
+
+    for tirada in range(tirades):
+
+        suma = tirar_dados()
+
+        repeticiones[suma - 2] += 1  
+    return repeticiones 
+
+def imprimir_repeticions():
     ...
-def calcular_maxim_valor():
-    ...
-def mostrar_histograma():
-    ...
+def calcular_maxim_valor(repeticions):
+    size = len(repeticions)
+    for i in range(size):
+        for j in range(size - i - 1):
+            if repeticions[j] > repeticions[j + 1]:
+                repeticions[j], repeticions[j + 1] = repeticions[j + 1], repeticions[j]
+    return repeticions[-1]  # Devolver el último elemento, que es el máximo valor
+
+def mostrar_histograma(repeticiones):
+    repeticiones = calcular_nombre_de_repeticions(tirades)
+    imprimir_repeticions(repeticiones)
+    calcular_maxim_valor(repeticiones)
+
+
+mostrar_histograma(tirades) 

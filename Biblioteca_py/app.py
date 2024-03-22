@@ -1,6 +1,7 @@
-from prestamo import Prestamo
-from prestamo.libro import Libro
-from prestamo.socio import Socio
+from libro import Libro
+from socio import Socio
+from Biblioteca_py import Prestamo
+
 class App:
     def exec(self):
         #Crear libros
@@ -12,19 +13,18 @@ class App:
         socio2: Socio = Socio("Oscar", "Gomez", 202)
 
         #Crear Prestamo
-        prestamo1: Prestamo = Prestamo()
-        prestamo2: Prestamo = Prestamo()
+        prestamo1: Prestamo = Prestamo(libro1, socio1)
+        prestamo2: Prestamo = Prestamo(libro1, socio2)
 
         #Realizar acciones
         libro1.informacion()
         socio2.informacion()
-        socio1.solicitar_prestamo(libro1, "2024-03-15")
+        #socio1.solicitar_prestamo(libro1, "2024-03-15")
+        prestamo1.registrar_prestamo("2024-03-15")
         libro1.informacion()
-        socio2.devolver_prestamo(libro1)
-        libro1.informacion()
-        prestamo1.registrar_prestamo()
+        #socio2.devolver_prestamo(libro1)
         prestamo2.devolver_prestamo()
-
+        libro1.informacion()
 
 app = App()
 app.exec()

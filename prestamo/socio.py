@@ -1,4 +1,4 @@
-from libro import Libro
+from prestamo.libro import Libro
 #from prestamo import Prestamo
 
 class Socio:

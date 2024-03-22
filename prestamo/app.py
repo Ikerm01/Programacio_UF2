@@ -1,6 +1,6 @@
 from prestamo import Prestamo
-from libro import Libro
-from socio import Socio
+from prestamo.libro import Libro
+from prestamo.socio import Socio
 class App:
     def exec(self):
         #Crear libros

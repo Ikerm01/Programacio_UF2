@@ -7,3 +7,4 @@ class Principal
     Pantalla.escribir("Hola mundo");
     }
 }
+    

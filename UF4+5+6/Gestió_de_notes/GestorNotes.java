@@ -9,6 +9,6 @@ class GestorNotes {
     }
     
     public void obtenir_nota(String nom_alumne){
-        
+
     }
 }

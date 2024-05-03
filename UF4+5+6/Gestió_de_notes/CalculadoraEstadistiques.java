@@ -1,15 +1,25 @@
 package Gestió_de_notes;
 
+import java.lang.reflect.Array;
+
 public class CalculadoraEstadistiques {
-    public double calcularMitjana(double[] notes){
-        
+    public static double calcularMitjana(double[] notes){
+        double suma = 0.0;
+
+        for (double nota : notes){
+            suma += nota;
+        }
+
+        return suma / notes.length;
     }
 
-    public double calcularMitjana(double[] notes){
-
+    public static double calcularMaxim(double[] notes){
+        Array.sort(notes);
+        return notes[notes.length - 1];
     }
 
-    public double calcularMinim(double[] notes){
-
+    public static double calcularMinim(double[] notes){
+        Array.sort(notes);
+        return notes[0];
     }
 }

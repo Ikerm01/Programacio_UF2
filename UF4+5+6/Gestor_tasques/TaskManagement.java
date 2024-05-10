@@ -7,10 +7,10 @@ El programa hauria de permetre les següents funcionalitats:
     Marcar una tasca com a completada.
     Esborrar una tasca.
     Mostrar totes les tasques.
-    Mostrar les tasques per prioritat (baixa, mitjana o alta).
-    Sortir del programa.
+        Mostrar les tasques per prioritat (baixa, mitjana o alta).
+        Sortir del programa.
 
-Pista: Hem vist Array, HashMap i ArrayList */
+    Pista: Hem vist Array, HashMap i ArrayList */
 
 
 package Gestor_tasques;

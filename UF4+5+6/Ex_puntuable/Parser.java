@@ -3,17 +3,15 @@ package Ex_puntuable;
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
 import java.io.*;
-
+import Ex_puntuable.Personatge;
 
 class Parser 
 {
     /*Vamos a intentar leer y procesar el xml */
     public static void main(String[] args) throws Exception
     {
-
         try
-        {
-            File xml = new File ("personatges.xml");
+        {    File xml = new File ("personatges.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document document = dBuilder.parse(xml);

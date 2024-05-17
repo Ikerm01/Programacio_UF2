@@ -43,7 +43,23 @@ class TaskManagement
 			System.out.println(task);
 		}
 	}
+    public void modifyTask(int taskId, String Name, String Description, String DueDate) {
+        Task task = tasks.get(taskId);
+        task.Name = Name;
+        task.Description = Description;
+        task.DueDate = DueDate;
+    }
     
+    public void listTasksByStatus(String status) {
+        System.out.println("Tareas con estado: " + status);
+        tasks.forEach((key, task) -> {
+            if (task.getStatus() == status) {
+                System.out.println(task);
+            }
+        });
+    }
+        
+
 }
 
 class Task {

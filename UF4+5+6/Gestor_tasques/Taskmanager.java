@@ -1,6 +1,9 @@
 package Gestor_tasques;
 
 import java.util.HashMap;
+
+import TaskManagement;
+
 import java.util.ArrayList;
 
 class TaskManagement
@@ -43,9 +46,9 @@ class TaskManagement
 			System.out.println(task);
 		}
 	}
-    public void modifyTask(int taskId, String Name, String Description, String DueDate) {
+    public void modifyTask(int taskId, String taskName, String Description, String DueDate) {
         Task task = tasks.get(taskId);
-        task.Name = Name;
+        task.taskName = taskName;
         task.Description = Description;
         task.DueDate = DueDate;
     }
@@ -111,23 +114,28 @@ class Task {
     }
 }
 
-class Main
-{
-	public static void main(String[] args) {
-		TaskManagement manager = new TaskManagement();
-		System.out.println("Add task");
-		manager.addTask("Aprobar Programacion", "Alta");
-		System.out.println("Hacemos Print de todo");
-		manager.printAllTask();
-		System.out.println("Hacemos Print de prioridad");
-		manager.printTaskByPriority("Alta");
-		System.out.println("Hacemos que la tarea este done");
-		manager.doneTask(1);
-		System.out.println("Hacemos Print de todo");
-		manager.printAllTask();
-		System.out.println("Eliminamos la tarea");
-		manager.deleteTask(1);
-		System.out.println("Hacemos Print de todo");
-		manager.printAllTask();
-	}
+class Main {
+    public static void main(String[] args) {
+        TaskManagement manager = new TaskManagement();
+        System.out.println("Añadir tarea");
+        manager.addTask("Aprobar Programación", "Preparar el examen final", "2024-05-31");
+        System.out.println("Imprimir todas las tareas");
+        manager.printAllTask();
+        System.out.println("Imprimir tareas por prioridad");
+        manager.printTaskByPriority("Alta");
+        System.out.println("Marcar tarea como completada");
+        manager.doneTask(1);
+        System.out.println("Imprimir todas las tareas");
+        manager.printAllTask();
+        System.out.println("Modificar una tarea");
+        manager.modifyTask(1, "Aprobar Programación", "Preparar examen y práctica final", "2024-06-15");
+        System.out.println("Imprimir todas las tareas");
+        manager.printAllTask();
+        System.out.println("Imprimir tareas por estado");
+        manager.listTasksByStatus("Completada");
+        System.out.println("Eliminar una tarea");
+        manager.deleteTask(1);
+        System.out.println("Imprimir todas las tareas");
+        manager.printAllTask();
+    }
 }

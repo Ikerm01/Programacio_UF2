@@ -13,9 +13,11 @@ El programa hauria de permetre les següents funcionalitats:
     Pista: Hem vist Array, HashMap i ArrayList */
 
 
-package Gestor_tasques;
+
 
 import java.util.HashMap;
+
+import Gestor_tasques.Task;
 
 public class TaskManagement {
 

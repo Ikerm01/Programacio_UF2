@@ -2,7 +2,7 @@ package App_robot;
 
 import javax.swing.*;
 import java.awt.*;
-
+import java.awt.event.*;
 class Robot {
     private JFrame frame; /*Ventana */
     private JPanel panel; /*Panel para meter los botones */
@@ -10,7 +10,7 @@ class Robot {
 
 
     public Robot(){
-        robot = new Robot();
+        /*robot = new Robot();*/
         /*Configuracion de ventana */
         frame = new JFrame("Control de Robot");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,8 +34,40 @@ class Robot {
         panel.add(Guardar_Estat);
         panel.add(Carregar_Estat);
         
-            
-        )
+        /*Mostrar la ventana */
+        frame.setVisible(true);
+
+        /*Agregar actionlistener a cada boton */
+        Moure_Endevant.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Te has mogut cap endevant");
+            }
+        });
+        Moure_Enrere.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Te has mogut cap enrere");
+            }
+        });
+        Girar_Esquerra.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Te has mogut cap l'esquerre");
+            }
+        });
+        Girar_Dreta.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Te has mogut cap la dreta");
+            }
+        });
+        Guardar_Estat.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Estat guardat");
+            }
+        });
+        Carregar_Estat.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Estat carregat");
+            }
+        });
 
     }
 }

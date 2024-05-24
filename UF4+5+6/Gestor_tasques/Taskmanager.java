@@ -1,9 +1,6 @@
 package Gestor_tasques;
 
 import java.util.HashMap;
-
-import TaskManagement;
-
 import java.util.ArrayList;
 
 class TaskManagement

@@ -16,6 +16,26 @@ class Robot {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,300); 
 
+        /*Comfiguracion del panel y los botones */
+        panel = new JPanel();
+        panel.setLayout(new GridLayout(3,3));
+        Moure_Endevant = new JButton("Moure Endevant"); 
+        Moure_Enrere = new JButton("Moure Enrere");
+        Girar_Esquerra = new JButton("Girar Esquerra"); 
+        Girar_Dreta = new JButton("Girar Dreta"); 
+        Guardar_Estat = new JButton("Guardar Estat"); 
+        Carregar_Estat = new JButton("Carregar Estat");
+
+        /*Añadir los botones al panel */
+        panel.add(Moure_Endevant);
+        panel.add(Moure_Enrere);
+        panel.add(Girar_Esquerra);
+        panel.add(Girar_Dreta);
+        panel.add(Guardar_Estat);
+        panel.add(Carregar_Estat);
+        
+            
+        )
 
     }
 }

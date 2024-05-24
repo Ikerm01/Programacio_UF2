@@ -9,8 +9,9 @@ class Robot {
     private JButton Moure_Endevant, Moure_Enrere, Girar_Esquerra, Girar_Dreta, Guardar_Estat, Carregar_Estat; /*Botones */
 
 
-    public Robot(){
-        /*robot = new Robot();*/
+    public Robot()
+    {
+        
         /*Configuracion de ventana */
         frame = new JFrame("Control de Robot");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,8 +35,7 @@ class Robot {
         panel.add(Guardar_Estat);
         panel.add(Carregar_Estat);
         
-        /*Mostrar la ventana */
-        frame.setVisible(true);
+        
 
         /*Agregar actionlistener a cada boton */
         Moure_Endevant.addActionListener(new ActionListener() {
@@ -68,6 +68,49 @@ class Robot {
                 System.out.println("Estat carregat");
             }
         });
+        /*Mostrar la ventana */
+        frame.setVisible(true);
 
+    }
+
+    public class EstatJugador {
+        private int x;
+        private int y;
+        private String direccio;
+
+        public EstatJugador(int x, int y, String direccio){
+            this.x = x;
+            this.y = y;
+            this.direccio = direccio;
+        }
+
+        public int getX(){
+            return x;
+        }
+        
+        public void setX(int x){
+            this.x = x;
+        }
+        
+        public int getY(){
+            return y;
+        }
+
+        public void setY(int y){
+            this.y = y;
+        }
+
+        public String getDireccio(){
+            return direccio;
+        }
+
+        public void setDireccio(String direccio){
+            this.direccio = direccio;
+        }
+        
+    }
+
+    public static void main(String[] args) {
+        new Robot();
     }
 }

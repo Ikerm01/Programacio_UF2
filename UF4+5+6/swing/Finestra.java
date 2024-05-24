@@ -31,6 +31,6 @@ public class Finestra {
         frame.setLayout(managerButtons);
         frame.setSize(300,200); 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+        
     }
 }

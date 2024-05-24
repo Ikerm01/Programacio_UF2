@@ -7,11 +7,12 @@ class Robot {
     private JFrame frame; /*Ventana */
     private JPanel panel; /*Panel para meter los botones */
     private JButton Moure_Endevant, Moure_Enrere, Girar_Esquerra, Girar_Dreta, Guardar_Estat, Carregar_Estat; /*Botones */
-
+    private EstatJugador EstatJugador;
 
     public Robot()
     {
-        
+        /*Inicializar el estado del jugador */
+        EstatJugador = new EstatJugador(0, 0, "Nort");
         /*Configuracion de ventana */
         frame = new JFrame("Control de Robot");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

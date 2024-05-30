@@ -1,4 +1,4 @@
-package UF4+5+6.Progrmacio_orientada_objectes;
+package Progrmacio_orientada_objectes;
 
 class Cercle {
     private double radi = 12;
